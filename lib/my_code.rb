@@ -50,13 +50,10 @@ end
 
 def reduce_to_all_true(array)
   i = 0
+  total = true
   while i < array.length do
-    if !!array[i] == true
-      i += 1
-    else !!array[i] == false
-      return false
-      i += 1
-    end
+    total = array[i] && total
+    i += 1
   end
   return true
 end  
